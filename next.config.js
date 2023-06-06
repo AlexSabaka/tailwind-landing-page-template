@@ -1,4 +1,14 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {}
+const nextConfig = {
+  output: 'export',
 
-module.exports = nextConfig
+  // Define the paths to be statically generated
+  async generateStaticPaths() {
+    return {
+      // Add paths as needed
+      paths: ['/'],
+    };
+  },
+};
+
+module.exports = nextConfig;
